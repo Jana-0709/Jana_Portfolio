@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jana G | Marine Research Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+    --bg:#061a2d;
+    --card:rgba(255,255,255,.08);
+    --accent:#46d9ff;
+    --text:#eef7ff;
+    --shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+    linear-gradient(
+        rgba(3,15,30,.88),
+        rgba(3,15,30,.95)
+    ),
+    url('https://img.freepik.com/premium-photo/coral-reef-with-fish_777271-1403.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:var(--text);
+    line-height:1.7;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(10px);
+    box-shadow:var(--shadow);
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:700;
+    color:var(--accent);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--accent);
+}
+
+/* Sections */
+
+section{
+    padding:100px 8%;
+}
+
+.title{
+    text-align:center;
+    color:var(--accent);
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero h4{
+    font-size:1.2rem;
+    margin-bottom:10px;
+    color:#cfefff;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:var(--accent);
+    margin-bottom:10px;
+}
+
+.hero h3{
+    margin-bottom:20px;
+    font-weight:500;
+}
+
+.hero p{
+    max-width:700px;
+}
+
+.hero img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid var(--accent);
+    box-shadow:
+        0 0 20px rgba(70,217,255,.5),
+        0 0 40px rgba(70,217,255,.2);
+}
+
+/* Button */
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    background:var(--accent);
+    color:#001b2b;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* Stats */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:var(--card);
+    backdrop-filter:blur(10px);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.stat h2{
+    color:var(--accent);
+    font-size:2rem;
+}
+
+/* Grid */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* Cards */
+
+.card{
+    background:var(--card);
+    padding:25px;
+    border-radius:18px;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(17, 108, 136, 0.993);
+    transition:all .3s ease;
+    box-shadow:var(--shadow);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:.95rem;
+}
+
+/* Skills */
+
+.card ul{
+    padding-left:20px;
+}
+
+.card ul li{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+/* Publications */
+
+.timeline{
+    border-left:3px solid var(--accent);
+    padding-left:25px;
+}
+
+.timeline div{
+    margin-bottom:30px;
+    position:relative;
+}
+
+.timeline div::before{
+    content:'';
+    position:absolute;
+    left:-33px;
+    top:5px;
+    width:14px;
+    height:14px;
+    background:var(--accent);
+    border-radius:50%;
+}
+
+/* Contact */
+
+.contact-card{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact-card p{
+    margin-bottom:12px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,.4);
+    margin-top:50px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero img{
+        width:220px;
+        height:220px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    section{
+        padding:80px 6%;
+    }
+}
+```css
+.contact-container{
+    display:flex;
+    justify-content:center;
+}
+
+.contact-card{
+    max-width:800px;
+    width:100%;
+    background:var(--card);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+}
+
+.contact-card h3{
+    color:var(--accent);
+    margin-bottom:15px;
+    font-size:1.8rem;
+}
+
+.contact-info{
+    margin-top:25px;
+}
+
+.contact-item{
+    margin-bottom:15px;
+    font-size:1rem;
+}
+
+.contact-item a{
+    color:white;
+    text-decoration:none;
+}
+
+.social-links{
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.social-btn{
+    padding:12px 20px;
+    border-radius:30px;
+    background:rgba(70,217,255,.15);
+    border:1px solid rgba(4, 91, 112, 0.4);
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-btn:hover{
+    background:var(--accent);
+    color:#001b2b;
+}
+
+```
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Portfolio</div>
+<nav>
+<a href="#about">About</a>
+<a href="#publications">Publications</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h4>Marine Biology Researcher</h4>
+<h1>Jana G</h1>
+<p>Fisheries Science Graduate | Crustacean Taxonomy | Estuarine Ecology | Biodiversity Research</p>
+<br>
+<p>Research-oriented Fisheries Science graduate with expertise in marine biology, biodiversity assessment, crustacean taxonomy, estuarine ecology, aquaculture and fisheries data analysis.</p>
+<a href="JANA CV ORIGINAL.pdf" class="btn">Download CV</a>
+</div>
+<div class="home-img">
+<img src="profile.jpg" alt="Jana G">
+</div>
+</section>
+
+<section id="about">
+<h2 class="title">Research Profile</h2>
+<div class="stats">
+<div class="stat"><h2>8.6</h2><p>CGPA</p></div>
+<div class="stat"><h2>9+</h2><p>Research Papers</p></div>
+<div class="stat"><h2>4</h2><p>Published</p></div>
+<div class="stat"><h2>2+</h2><p>Accepted</p></div>
+<div class="stat"><h2>1</h2><p>National Award</p></div>
+</div>
+</section>
+
+<section id="publications">
+
+<h2 class="title">Research Publications</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>New Record of Bristly Crab, Pilumnus hirtellus (Linnaeus, 1761)</h3>
+
+<p>
+New record of the bristly crab from the Vellar Estuary,
+Tamil Nadu, Southeastern India.
+</p>
+
+<p>
+<b>Journal:</b> Oceanological and Hydrobiological Studies
+</p>
+
+<p>
+<b>Status:</b> Published (2025)
+</p>
+
+<a href="https://doi.org/10.26881/oahs-2025.1.19" target="_blank">
+View Publication
+</a>
+</div>
+
+<div class="card">
+<h3>First Report of Grandidierella japonica Stephensen, 1938</h3>
+
+<p>
+First report of a non-native amphipod species from
+the Vellar Estuary, Southeast Coast of India.
+</p>
+
+<p>
+<b>Journal:</b> Çanakkale Onsekiz Mart University Journal of Marine Sciences and Fisheries
+</p>
+
+<p>
+<b>Status:</b> Published (2025)
+</p>
+
+<a href="https://doi.org/10.46384/jmsf.1742078" target="_blank">
+View Publication
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Population Structure, Reproductive Biology and Allometric Growth of Nanosesarma batavicum</h3>
+
+<p>
+Comprehensive study on population structure,
+reproductive biology and growth patterns of
+the sesarmid crab inhabiting tropical oyster reefs.
+</p>
+
+<p>
+<b>Journal:</b> Thalassas: An International Journal of Marine Sciences
+</p>
+
+<p>
+<b>Status:</b> Published (2026)
+</p>
+<a href="https://doi.org/10.1007/s41208-026-01138-9" target="_blank">
+View Publication
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>New Distributional Record of Athanas polymorphus Kemp, 1915</h3>
+
+<p>
+Integrated taxonomic study documenting
+Athanas polymorphus from the Vellar Estuary,
+Southeastern India.
+</p>
+
+<p>
+<b>Journal:</b> Ege Journal of Fisheries and Aquatic Sciences
+</p>
+
+<p>
+<b>Status:</b> Published (2026)
+</p>
+<a href="https://doi.org/10.12714/egejfas.43.3.05" target="_blank">
+View Publication
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Infestation of Alpheus estuariensis by the Parasite Urobopyrus processae</h3>
+
+<p>
+Documentation of parasitic infestation in
+Alpheus estuariensis from the Vellar Estuary.
+</p>
+
+<p>
+<b>Journal:</b> Çanakkale Onsekiz Mart University Journal of Marine Sciences and Fisheries
+</p>
+
+<p>
+<b>Status:</b> Accepted (2026)
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Population Structure and Temporal Allometry of Neotrapezium sublaevigatum</h3>
+
+<p>
+Seasonal population dynamics and allometric
+growth analysis from the Vellar Estuary.
+</p>
+
+<p>
+<b>Journal:</b> Aquatic Research
+</p>
+
+<p>
+<b>Status:</b> Accepted
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>First Record of Nanosesarma pontianacense (De Man, 1895) in India</h3>
+
+<p>
+First Indian record of the sesarmid crab
+Nanosesarma pontianacense from the Vellar Estuary.
+</p>
+
+<p>
+<b>Journal:</b> Journal of the Marine Biological Association of the United Kingdom
+</p>
+
+<p>
+<b>Status:</b> Submitted
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Temporal Pattern in Shell Allometric Dynamics and Condition Index of Modiolus metcalfi</h3>
+
+<p>
+Seasonal variation in growth patterns and condition
+factors of Modiolus metcalfi from the Vellar Estuary.
+</p>
+
+<p>
+<b>Journal:</b> Journal of Bangladesh Academy of Sciences
+</p>
+
+<p>
+<b>Status:</b> Submitted
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Life Cycle Dynamics and Reproductive Potential of Grandidierella bonniroides</h3>
+
+<p>
+Investigation of life cycle characteristics and
+reproductive performance under captive conditions.
+</p>
+
+<p>
+<b>Journal:</b> Journal of the Marine Biological Association of the United Kingdom
+</p>
+
+<p>
+<b>Status:</b> Submitted
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+<section id="projects">
+<h2 class="title">Research Projects</h2>
+<div class="grid">
+<div class="card"><h3>Oyster Bed Macrofauna</h3><p>Documentation of oyster bed associated macrofauna of Vellar Estuary.</p></div>
+<div class="card"><h3>Nanosesarma batavicum</h3><p>Population structure, reproductive biology and allometry.</p></div>
+<div class="card"><h3>Athanas polymorphus</h3><p>Distributional record using integrated taxonomy.</p></div>
+<div class="card"><h3>Crustacean Taxonomy</h3><p>Identification and biodiversity assessment.</p></div>
+</div>
+</section>
+
+<section>
+<h2 class="title">Experience & Awards</h2>
+<div class="grid">
+<div class="card">
+<h3>ECOR Foundation</h3>
+<p>Research Intern working on biodiversity assessment and coastal ecosystem studies.</p>
+</div>
+<div class="card">
+<h3>Fishackthon India 2025</h3>
+<p>Third Prize Winner – Stock Variation of Indian White Shrimp.</p>
+</div>
+<div class="card">
+<h3>Conferences</h3>
+<p>Blue Horizon 2025, Kerala Science Congress, MRCVBR 2026.</p>
+</div>
+</div>
+</section>
+
+<section id="skills">
+
+<h2 class="title">Technical Skills</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🔬 Research & Laboratory Skills</h3>
+
+<ul>
+<li>Biodiversity Assessment</li>
+<li>Marine Biology Research</li>
+<li>Estuarine Ecology</li>
+<li>Crustacean Taxonomy</li>
+<li>Aquatic Microbiology</li>
+<li>Field Sampling & Specimen Collection</li>
+<li>Morphometric Analysis</li>
+<li>Population Biology</li>
+<li>Reproductive Biology Studies</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>🧬 Molecular & Analytical Techniques</h3>
+
+<ul>
+<li>DNA Isolation</li>
+<li>PCR Techniques</li>
+<li>Basic Molecular Biology</li>
+<li>Bacterial Identification</li>
+<li>Aquaculture Disease Diagnosis</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>📊 Data Analysis & Statistics</h3>
+
+<ul>
+<li>Regression Analysis</li>
+<li>Correlation Analysis</li>
+<li>ANCOVA</li>
+<li>Chi-square Test</li>
+<li>Allometric Growth Analysis</li>
+<li>Biodiversity Indices</li>
+<li>Multivariate Analysis</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>💻 Software & Programming</h3>
+
+<ul>
+<li>Microsoft Excel</li>
+<li>SPSS</li>
+<li>R Programming</li>
+<li>Python</li>
+<li>Power BI</li>
+<li>Bioinformatics Tools</li>
+<li>Artificial Intelligence Applications</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>🌊 Fisheries & Environmental Studies</h3>
+
+<ul>
+<li>Fisheries Resource Assessment</li>
+<li>Aquaculture Systems</li>
+<li>Coastal Ecosystem Monitoring</li>
+<li>Environmental Data Collection</li>
+<li>Fisheries Data Management</li>
+<li>Sustainable Fisheries Management</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>📝 Professional Skills</h3>
+
+<ul>
+<li>Scientific Writing</li>
+<li>Research Publication</li>
+<li>Technical Communication</li>
+<li>Conference Presentation</li>
+<li>Leadership & Teamwork</li>
+<li>Project Coordination</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Let's Connect</h2>
+
+<div class="contact-container">
+
+    <div class="contact-card">
+
+        <h3>Get In Touch</h3>
+
+        <p>
+            Interested in research collaboration, biodiversity studies,
+            fisheries science, marine ecology, or academic discussions?
+            Feel free to contact me.
+        </p>
+
+        <div class="contact-info">
+
+            <div class="contact-item">
+                📧
+                <a href="mailto:sanjaijana123@gmail.com">
+                    sanjaijana123@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-item">
+                📱
+                <a href="tel:+918675579092">
+                    +91 8675579092
+                </a>
+            </div>
+
+            <div class="contact-item">
+                📍 Cuddalore, Tamil Nadu, India
+            </div>
+
+        </div>
+
+        <div class="social-links">
+
+            <a href="https://www.linkedin.com/in/jana-gothandapani-905113301/" class="social-btn">
+                LinkedIn
+            </a>
+
+            <a href="https://orcid.org/0009-0005-3286-7711" class="social-btn">
+                ORCID
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Gothandapani-Jana" class="social-btn">
+                ResearchGate
+            </a>
+
+            <a href="mailto:sanjaijana123@gmail.com"
+               class="social-btn">
+                Email Me
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+```
+
+
+<footer>
+Copyright © 2026 by Jana G | All Rights Reserved|
+</footer>
+
+</body>
+</html>
